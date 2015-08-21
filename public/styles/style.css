@@ -1,3 +1,9 @@
+body {
+    margin-top: 70px;
+}
+.navbar-inverse {
+    /* configure the color of your navigation bar's background, border and fonts here */
+}
 
 .top{
     font-family: sans-serif;
@@ -7,8 +13,5 @@
     justify-content: space-around;
     background-color: yellow;
     height:50px;
-    
-    
-    
 };
 

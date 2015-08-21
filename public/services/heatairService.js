@@ -1,8 +1,8 @@
-'use strict'
+'use strict';
 
 var app = angular.module('hensleeApp');
 
-app.service('heatairService', function(){
-    
+app.service('heatairService', function () {
+
 });
 
