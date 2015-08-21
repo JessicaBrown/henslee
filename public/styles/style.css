@@ -1,0 +1,14 @@
+
+.top{
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    background-color: yellow;
+    height:50px;
+    
+    
+    
+};
+
