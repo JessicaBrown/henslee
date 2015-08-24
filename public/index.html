@@ -5,38 +5,57 @@
     <meta charset="UTF-8">
     <title>Henslee's Plumbing Heating and Air</title>
     <!--Link CSS-->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="styles/style.css">
 </head>
 
 
-<body ng-controller="HomeCtrl">
-     <ng-view></ng-view>
-    <div class="container-fluid">
-        <div class="top">
-                    <a href="/#/home"> Home </a>
-                    <a href="/#/views/about"> About </a>
-                    <a href="/#/views/heatair"> Heat and Air </a>
-                    <a href="/#/views/plumbing"> Plumbing </a>
-                    <a href="/#/views/contact"> Contact </a>
-                </div>
-           
+<body>
+    <nav class="navbar navbar-fixed-top navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation" aria-expanded="false">
+                    <span class="sr-only">Show Menu</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#/home">Home</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navigation">
+                <ul class="nav navbar-nav">
+                    <li><a href="#/about">About</a></li>
+                    <li><a href="#/heatair">Heat and Air</a></li>
+                    <li><a href="#/plumbing">Plumbing</a></li>
+                    <li><a href="#/contact">Contact</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="footer">
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+
+                <ng-view></ng-view>
+
+            </div>
+        </div>
+        <footer>
             Henslee's Plumbing, Heating & Air LLC</br>
             Licensed, Insured, and Bonded. OK# 63615</br>
             PO Box 57188</br> Oklahoma City, OK 73157</br>
             <a class="ptn1" href="tel:+1-405-601-1114">Call 405-601-1114</a>
             <a class="ptn2" href="tel:+1-405-637-8782">Call 405-637-8782</a>
-            <a class="fb" href="https://www.facebook.com/Okcplumbing?fref=ts">FB link</a> 
-        </div>
+            <a class="fb" href="https://www.facebook.com/Okcplumbing?fref=ts">FB link</a>
+        </footer>
     </div>
 
-            <!--Link Angular-->
+    <!--Link JQuery-->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <!--Link Angular-->
     <script src="bower_components/angular/angular.js"></script>
     <!--Link Angular-Route-->
     <script src="bower_components/angular-route/angular-route.js"></script>
-    <!--Link JQuery
-    <script src="bower_components/jquery/dist/jquery.js"></script>-->
     <!--Link Bootstrap-->
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <!--Link Module-->
