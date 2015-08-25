@@ -1,7 +1,7 @@
-'use strict'
+'use strict';
 
 var app = angular.module('hensleeApp');
 
-app.controller('HomeCtrl', function($scope, homeService){
-    $scope.message = 'Testing routing Hell!';
+app.controller('HomeCtrl', function ($scope, homeService) {
+    $scope.message = 'Inside the Home Controller';
 });

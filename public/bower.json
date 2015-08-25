@@ -1,0 +1,27 @@
+{
+  "name": "henslee",
+  "version": "1.0.0",
+  "homepage": "https://github.com/JessicaBrown/henslee",
+  "authors": [
+    "Jessica Brown <brownj3412@gmail.com>"
+  ],
+  "description": "Henslee",
+  "main": "app.js",
+  "keywords": [
+    "henslee"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "angular": "~1.4.4",
+    "angular-route": "~1.4.4",
+    "bootstrap": "~3.3.5"
+  }
+}
