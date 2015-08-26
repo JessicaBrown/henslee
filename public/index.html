@@ -28,7 +28,8 @@
             </div>
             <div class="collapse navbar-collapse" id="navigation">
                 <ul class="nav navbar-nav">
-                    <li><a class="home" href="#/about">About</a></li>
+                    <li><a id="home" href="#/home" >Home</a></li>
+                    <li><a class="about" href="#/about">About</a></li>
                     <li><a class="hNa" href="#/heatair">Heat and Air</a></li>
                     <li><a class="plum" href="#/plumbing">Plumbing</a></li>
                     <li><a class="con" href="#/contact">Contact</a></li>
@@ -36,29 +37,29 @@
             </div>
         </div>
     </nav>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
+    <!--<div class="container">-->
+        <!--<div class="row">-->
+            <!--<div class="col-md-12 ">-->
 
                 <ng-view></ng-view>
 
-            </div>
-        </div>
-        <div class="col-md-2">
+            <!--</div>-->
+        <!--</div>-->
+       
             <footer class="footer navbar-fixed-bottom">
-                <a class="fb" href="https://www.facebook.com/Okcplumbing?fref=ts"><img class="fbLogo" src="images/find-us-on-FB copy.jpg" alt="FB logo"></a>
+                <a class="fb" href="https://www.facebook.com/Okcplumbing?fref=ts"><img class="fbLogo" src="images/black.png" alt="FB logo"></a>
                 </br>
                 <div class="col-md-6 footInfo">
                     Henslee's Plumbing, Heating & Air LLC</br>
                     Licensed, Insured, and Bonded. OK# 63615</br> Oklahoma City, OK 73157</br>
                 </div>
 
-                <a href="tel:+1-405-601-1114"><img class="ptnPic" src="images/phone.jpg" /></a>
+                <a href="tel:+1-405-601-1114"><img class="ptnPic" src="images/phone.png" /></a>
 
 
             </footer>
-        </div>
-    </div>
+       
+    <!--</div>-->
 
     <!--Link JQuery-->
     <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -66,6 +67,10 @@
     <script src="bower_components/angular/angular.js"></script>
     <!--Link Angular-Route-->
     <script src="bower_components/angular-route/angular-route.js"></script>
+    <!--Link NG- Animate-->
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <!--Link UI Bootstrap-->
+    <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
     <!--Link Bootstrap-->
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <!--Link Module-->

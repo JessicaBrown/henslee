@@ -1,5 +1,5 @@
 "use strict";
-var app = angular.module('hensleeApp', ['ngRoute']);
+var app = angular.module('hensleeApp', ['ngRoute', 'ui.bootstrap', 'ngAnimate']);
 
 app.config(function ($routeProvider) {
     $routeProvider
