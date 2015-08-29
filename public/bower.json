@@ -19,11 +19,13 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "~2.1.4",
     "angular": "~1.4.4",
-    "angular-route": "~1.4.4",
-    "bootstrap": "~3.3.5",
+    "angular-animate": "~1.4.4",
     "angular-bootstrap": "~0.13.3",
-    "angular-animate": "~1.4.4"
+    "angular-material": "~0.10.1",
+    "angular-route": "~1.4.4",
+    "background-blur": "~0.0.5",
+    "bootstrap": "~3.3.5",
+    "jquery": "~2.1.4"
   }
 }

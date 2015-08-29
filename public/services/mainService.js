@@ -2,11 +2,6 @@
 
 var app = angular.module('hensleeApp');
 
-app.service('aboutService', function () {
+app.service('mainService', function () {
 
 });
-
-
-
-
-

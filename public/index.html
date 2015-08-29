@@ -4,8 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Henslee's Plumbing Heating and Air</title>
-    <!--Link CSS-->
+    <!--Link Bootstrap CSS-->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <!--Link Angualr-Material CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/0.10.1/angular-material.css">
+   <!--Link CSS-->
     <link rel="stylesheet" type="text/css" href="styles/style.css">
 </head>
 
@@ -33,6 +36,7 @@
                     <li><a class="hNa" href="#/heatair">Heat and Air</a></li>
                     <li><a class="plum" href="#/plumbing">Plumbing</a></li>
                     <li><a class="con" href="#/contact">Contact</a></li>
+                     <li><a class="adm" href="#/admin">Admin</a></li>
                 </ul>
             </div>
         </div>
@@ -47,7 +51,7 @@
         <!--</div>-->
        
             <footer class="footer navbar-fixed-bottom">
-                <a class="fb" href="https://www.facebook.com/Okcplumbing?fref=ts"><img class="fbLogo" src="images/black.png" alt="FB logo"></a>
+                <a class="fb" href="https://www.facebook.com/Okcplumbing?fref=ts"><img class="fbLogo" src="images/black.gif" alt="FB logo"></a>
                 </br>
                 <div class="col-md-6 footInfo">
                     Henslee's Plumbing, Heating & Air LLC</br>
@@ -61,18 +65,22 @@
        
     <!--</div>-->
 
-    <!--Link JQuery-->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <!--Link Angular-->
-    <script src="bower_components/angular/angular.js"></script>
-    <!--Link Angular-Route-->
-    <script src="bower_components/angular-route/angular-route.js"></script>
-    <!--Link NG- Animate-->
-    <script src="bower_components/angular-animate/angular-animate.js"></script>
-    <!--Link UI Bootstrap-->
-    <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
-    <!--Link Bootstrap-->
-    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+   <!--Link JQuery-->
+   <script src="bower_components/jquery/dist/jquery.js"></script>
+   <!--Link Angular-->
+   <script src="bower_components/angular/angular.js"></script>
+   <!--Link Angular-Route-->
+   <script src="bower_components/angular-route/angular-route.js"></script>
+   <!--Link NG- Material-->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/0.10.1/angular-material.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-aria.js"></script>
+   <!--Link NG- Animate-->
+   <script src="bower_components/angular-animate/angular-animate.js"></script>
+   <!--Link Bootstrap-->
+   <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+   <!--Link UI Bootstrap-->
+   <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+   <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
     <!--Link Module-->
     <script src="js/app.js"></script>
     <!--Link Conrollers-->
@@ -81,12 +89,9 @@
     <script src="controllers/HeatAirCtrl.js"></script>
     <script src="controllers/PlumbingCtrl.js"></script>
     <script src="controllers/ContactCtrl.js"></script>
+    <script src="controllers/AdminCtrl.js"></script>
     <!--Link Service-->
-    <script src="services/homeService.js"></script>
-    <script src="services/aboutService.js"></script>
-    <script src="services/heatairService.js"></script>
-    <script src="services/plumbingService.js"></script>
-    <script src="services/contactService.js"></script>
+    <script src="services/mainService.js"></script>
 </body>
 
 </html>

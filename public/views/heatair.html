@@ -1,2 +1,20 @@
-<h1>Heat n Air</h1>
-<p>{{message}}</p>
+<div class="backHA">
+
+<div style="height: cover">
+   <carousel interval="myInterval" no-wrap="noWrapSlides">
+     <slide ng-repeat="slide in slides" active="slide.active">
+       <img ng-src="{{slide.image}}" style="margin:auto;">
+       <div class="carousel-caption">
+         <h4></h4>
+         <p>{{slide.text}}</p>
+       </div>
+     </slide>
+   </carousel>
+ </div>
+ <div class="haInfo">
+ <p class="text-center">100% Guarantee</P>
+ <p class="text-center">Residential and Commercial</p>
+ <p class="text-center">Trane Authorized Dealer</p>
+ </div>
+ 
+ 

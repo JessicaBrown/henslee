@@ -1,2 +1,23 @@
-<h1>Contact</h1>
-<p>{{message}}</p>
+
+        
+       <img id="contactUs"src="images/images.jpeg" alt="Contact Us">
+       <div class="contact">
+            <form name="contactForm" data-ng-submit="cf.sendMail()">
+                <md-input-container>
+                    <label>Name:</label>
+                        <input type="text" data-ng-model="cf.contactName" aria-label="name">
+                </md-input-container>
+                <md-input-container>
+                    <label>Email:</label>
+                    <input type="email" data-ng-model="cf.contactEmail">
+                </md-input-container>
+                <md-input-container>
+                    <label>Please enter your message in the space provided below:</label>
+                    <textarea data-ng-model="cf.contactMsg" columns="1" required></textarea>
+                </md-input-container>
+                <md-button type="submit" class="md-primary" ng-class="{'md-raised md-hue-1':(contactForm.$dirty && contactForm.$valid)}">Send</md-button>
+            </form>
+        </md-content>
+    </div>
+</div>
+</div>

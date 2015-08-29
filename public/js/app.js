@@ -1,5 +1,5 @@
 "use strict";
-var app = angular.module('hensleeApp', ['ngRoute', 'ui.bootstrap', 'ngAnimate']);
+var app = angular.module('hensleeApp', ['ngRoute', 'ui.bootstrap', 'ngAnimate', 'ngMaterial', 'ngAria']);
 
 app.config(function ($routeProvider) {
     $routeProvider
@@ -22,6 +22,11 @@ app.config(function ($routeProvider) {
         .when('/contact', {
             templateUrl: 'views/contact.html',
             controller: 'ContactCtrl',
+            controllerAs: 'cf'
+        })
+          .when('/admin', {
+            templateUrl: 'views/admin.html',
+            controller: 'AdminCtrl',
         })
 
         .otherwise({
