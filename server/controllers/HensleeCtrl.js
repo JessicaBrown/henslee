@@ -1,48 +1,25 @@
 'use strict';
  
 var mandrill = require('mandrill-api/mandrill');
-var mandrill_client = new mandrill.Mandrill('ZXm2F-AgRLBZoi4l-TWUqA');
-//  service: 'Gmail',
-//     auth: {
-//         user: 'brownj0923@gmail.com',
-//         pass: 'S0chanel'
-//     };
-
-// var mailOptions = {
-//     from: data.contactEmail, // sender address
-//     to: 'brownj0923@gmail.com', // list of receivers
-//     subject: 'Message from ' + data.contactName,// Subject line
-//      text: data.contactMsg// plaintext body
-    
-    
-//     transporter.sendMail(mailOptions, function(error, info){
-//     if(error){
-//         return console.log(error);
-//     }
-//     console.log('Message sent: ' + info.response);
-
-// })
-// };
-/**
- * Send an email when the contact from is submitted
- */
+var mandrill_client = new mandrill.Mandrill('ZXm2F-AgRLBZoi4l-TWUqA'); 
  
  module.exports = {
      sendMail: function(req, res){
-        var options = {
+        var email = {
             "headers": {
-                "Reply-To": req.body.contactMsg
+                "Reply-To": req.body.contactEmail
             },
+            "html": req.body.contactMsg,
             "subject": "Request for contact",
-            "from_email": 'hensleesplumbing@msn.com',
+            "from_email": 'hensleesplumbingheatandair@henslees.com',
             "from_name": req.body.contactName,
             "to": [{
-                "email": "hensleesplumbingheatandair@henslees.com", //replace with email name from domain
+                "email": "hensleesplumbing@msn.com", //replace with email name from domain
                 "name": 'Henslees Plumbing Heating and Air',
                 "type": "to"
             }],
         };
-        mandrill_client.messages.send({"message": options}, function(result) {
+        mandrill_client.messages.send({"message": email}, function(result) {
             console.log(result);
             res.json(result);
         }, function(e) {
@@ -54,18 +31,3 @@ var mandrill_client = new mandrill.Mandrill('ZXm2F-AgRLBZoi4l-TWUqA');
         
      }
  }
-// exports.sendMail = function(req, res) {
- 
-//     var data = req.body;
- 
-//     transporter.sendMail({
-//         from: data.contactEmail,
-//         to: 'brownj0923@gmail.com',
-//         subject: 'Message from ' + data.contactName,
-//         text: data.contactMsg
-//     });
- 
-//     res.json(data);
-// };
-
-

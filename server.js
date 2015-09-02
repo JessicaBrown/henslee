@@ -11,7 +11,7 @@ var mongoose = require('mongoose');
 
 
 var HensleeCtrl = require('./server/controllers/HensleeCtrl.js');
-
+var ReviewsCtrl = require('./server/controllers/ReviewsCtrl.js');
 
 //*************************************
 //            Server/Port          
@@ -19,6 +19,19 @@ var HensleeCtrl = require('./server/controllers/HensleeCtrl.js');
 
 var app = express();
 var data = { message: 'Working!!' }; 
+
+
+// var config = module.exports = {};
+
+// if (process.env.NODE_ENV == "dev") {
+// 	// DEVELOPMENT-SPECIFIC CONFIG //
+// 	config.portNum = 3000;
+	
+// } else {
+// 	// PRODUCTION-SPECIFIC CONFIG //
+// 	config.portNum = 80;
+	
+// }
 
 
 //*************************************
@@ -49,8 +62,9 @@ app.use(express.static('public'));
 //            Endpoints                
 //**************************************
 
-// app.get('/api/birds', SightingCtrl.read);
+app.get('/api/reviews', ReviewsCtrl.read);
 app.post('/contact-form', HensleeCtrl.sendMail);
+app.post('/api/review', ReviewsCtrl.addReview);
 // app.put('/api/birds/:id', SightingCtrl.update);
 // app.delete('/api/birds/:id', SightingCtrl.delete);
 

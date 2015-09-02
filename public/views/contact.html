@@ -1,7 +1,9 @@
 
-        
-       <img id="contactUs"src="images/images.jpeg" alt="Contact Us">
        <div class="contact">
+           <div flex layout="row" layout-align="center center">
+           <div flex-sm="100" flex-gt-sm="90" flex-gt-md="70" flex-gt-lg="50" class="md-whiteframe-z2">
+                <md-content class="md-padding">
+                    <div flex-sm="100" flex-gt-sm="80" layout-sm="column">
             <form name="contactForm" data-ng-submit="cf.sendMail()">
                 <md-input-container>
                     <label>Name:</label>
@@ -12,7 +14,7 @@
                     <input type="email" data-ng-model="cf.contactEmail">
                 </md-input-container>
                 <md-input-container>
-                    <label>Please enter your message in the space provided below:</label>
+                    <label>Message:</label>
                     <textarea data-ng-model="cf.contactMsg" columns="1" required></textarea>
                 </md-input-container>
                 <md-button type="submit" class="md-primary" ng-class="{'md-raised md-hue-1':(contactForm.$dirty && contactForm.$valid)}">Send</md-button>
@@ -21,3 +23,4 @@
     </div>
 </div>
 </div>
+       

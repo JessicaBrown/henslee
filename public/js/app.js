@@ -24,9 +24,15 @@ app.config(function ($routeProvider) {
             controller: 'ContactCtrl',
             controllerAs: 'cf'
         })
-          .when('/admin', {
-            templateUrl: 'views/admin.html',
-            controller: 'AdminCtrl',
+          .when('/review', {
+            templateUrl: 'views/review.html',
+            controller: 'ReviewCtrl',
+            controllerAs: 'vm',
+            resolve: {
+                recentReviews: function(mainService) {
+                    return mainService.getReviews();
+                }
+            }
         })
 
         .otherwise({

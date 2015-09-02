@@ -36,7 +36,7 @@ app.controller('ContactCtrl',
 
                     $mdToast.show(
                         $mdToast.simple()
-                            .content('Thanks for your message ' + data.contactName + ' we appreciate your business!')
+                            .content('Thanks for contacting us ' + data.contactName + ' we appreciate your business!')
                             .position($scope.getToastPosition())
                             .hideDelay(5000)
                         );
