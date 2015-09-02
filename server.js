@@ -23,22 +23,23 @@ var data = { message: 'Working!!' };
 
 // var config = module.exports = {};
 
-// if (process.env.NODE_ENV == "dev") {
-// 	// DEVELOPMENT-SPECIFIC CONFIG //
-// 	config.portNum = 3000;
+ if (process.env.NODE_ENV == "dev") {
+ 	// DEVELOPMENT-SPECIFIC CONFIG //
+ 	var portNum = 8080;
 	
-// } else {
-// 	// PRODUCTION-SPECIFIC CONFIG //
-// 	config.portNum = 80;
+ } else {
+ 	// PRODUCTION-SPECIFIC CONFIG //
+ 	var portNum = 80;
 	
-// }
+ }
 
 
 //*************************************
 //         MondoDB Connection           
 //*************************************
 
-var port = process.env.PORT || 8080;
+//var port = process.env.PORT || 8080;
+var port = portNum;
 var mongoUri = 'mongodb://localhost/henslee';
 
 mongoose.set('debug', true);
