@@ -1,0 +1,29 @@
+{
+  "name": "henslee",
+  "version": "1.0.0",
+  "description": "",
+  "main": "config.js",
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "cors": "^2.7.1",
+    "express": "^4.13.3",
+    "mandrill-api": "^1.0.45",
+    "mongojs": "^1.3.0",
+    "mongoose": "^4.1.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JessicaBrown/henslee.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JessicaBrown/henslee/issues"
+  },
+  "homepage": "https://github.com/JessicaBrown/henslee#readme"
+}
