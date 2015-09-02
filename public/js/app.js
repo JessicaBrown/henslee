@@ -1,5 +1,5 @@
 "use strict";
-var app = angular.module('hensleeApp', ['ngRoute', 'ui.bootstrap', 'ngAnimate', 'ngMaterial', 'ngAria']);
+var app = angular.module('hensleeApp', ['ngRoute', 'ui.bootstrap', 'ngMaterial', 'ngAria']);
 
 app.config(function ($routeProvider) {
     $routeProvider
@@ -11,14 +11,14 @@ app.config(function ($routeProvider) {
             templateUrl: '/views/about.html',
             controller: 'AboutCtrl'
         })
-        .when('/heatair', {
-            templateUrl: 'views/heatair.html',
-            controller: 'HeatAirCtrl',
-        })
-        .when('/plumbing', {
-            templateUrl: 'views/plumbing.html',
-            controller: 'PlumbingCtrl',
-        })
+        // .when('/heatair', {
+        //     templateUrl: 'views/heatair.html',
+        //     controller: 'HeatAirCtrl',
+        // })
+        // .when('/plumbing', {
+        //     templateUrl: 'views/plumbing.html',
+        //     controller: 'PlumbingCtrl',
+        // })
         .when('/contact', {
             templateUrl: 'views/contact.html',
             controller: 'ContactCtrl',

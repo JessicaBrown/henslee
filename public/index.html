@@ -3,6 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
     <title>Henslee's Plumbing Heating and Air</title>
     <!--Link Bootstrap CSS-->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
@@ -10,53 +16,62 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/0.10.1/angular-material.css">
    <!--Link CSS-->
     <link rel="stylesheet" type="text/css" href="styles/style.css">
+       <!-- Fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
+    <!-- favicon icon -->
+    <link rel="shortcut icon" href="/images/favicon4.ico" type="image/x-icon" />
 </head>
 
 
 <body>
+    
+   
+    
+    <div class="brand">Henslee's Plumbing Heating and Air</div>
+    <div class="address-bar">Licensed, Insured, and Bonded. OK# 63615 | Oklahoma City, OK 73157| 1-405-601-1114</div>
 
-    <!--Menu with hamburger responsiveness-->
-    <nav class="navbar navbar-fixed-top navbar-inverse">
-        <div class="container1">
+    <!-- Navigation -->
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation" aria-expanded="false">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Show Menu</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#/home"> 
-                    <img class="img-responsive img-rounded" ng-src="images/smallHlogo.jpeg" alt="Henslee logo">
-                </a>
+                <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
+                <a class="navbar-brand" href="#/home">Henslee's Plumbing and HVAC</a>
             </div>
-            <div class="collapse navbar-collapse" id="navigation">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a id="home" href="#/home" >Home</a></li>
+                    <li><a class="home" href="#/home" >Home</a></li>
                     <li><a class="about" href="#/about">About</a></li>
-                    <li><a class="hNa" href="#/heatair">Heat and Air</a></li>
-                    <li><a class="plum" href="#/plumbing">Plumbing</a></li>
                     <li><a class="con" href="#/contact">Contact</a></li>
-                     <li><a class="adm" href="#/review">Reviews</a></li>
+                    <li><a class="review" href="#/review">Reviews</a></li>
                 </ul>
             </div>
+            <!-- /.navbar-collapse -->
         </div>
+        <!-- /.container -->
     </nav>
-   
-                <ng-view></ng-view>
 
-       
-            <footer class="footer navbar-fixed-bottom">
-                <a class="fb" href="https://www.facebook.com/Okcplumbing?fref=ts"><img class="fbLogo" src="images/black.gif" alt="FB logo"></a>
-                </br>
-                <div class="col-md-6 footInfo">
-                    Henslee's Plumbing, Heating & Air LLC</br>
-                    Licensed, Insured, and Bonded. OK# 63615</br> Oklahoma City, OK 73157</br>
+        <ng-view><br class="clear transparent"></br></ng-view>
+        
+    <!-- /.container -->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p>Copyright &copy; Henslee's Plumbing Heat and Air 2015</p>
                 </div>
-
-                <a href="tel:+1-405-601-1114"><img class="ptnPic" src="images/phone.png" /></a>
-
-
-            </footer>
+            </div>
+        </div>
+    </footer>
        
     <!--</div>-->
 
@@ -81,12 +96,14 @@
     <!--Link Conrollers-->
     <script src="controllers/HomeCtrl.js"></script>
     <script src="controllers/AboutCtrl.js"></script>
-    <script src="controllers/HeatAirCtrl.js"></script>
-    <script src="controllers/PlumbingCtrl.js"></script>
+    <!--<script src="controllers/HeatAirCtrl.js"></script>
+    <script src="controllers/PlumbingCtrl.js"></script>-->
     <script src="controllers/ContactCtrl.js"></script>
     <script src="controllers/ReviewCtrl.js"></script>
     <!--Link Service-->
     <script src="services/mainService.js"></script>
+    
+
 </body>
 
 </html>
