@@ -250,4 +250,6 @@ footer p {
 .updateBox{
     margin-bottom: 5%;
 }
-
+.a, .carousel-control{
+    display: none;
+}

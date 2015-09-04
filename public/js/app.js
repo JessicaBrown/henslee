@@ -62,4 +62,14 @@ app.config(function ($routeProvider) {
         .otherwise({
             redirectTo: '/home'
     });
+})
+
+.directive('collapseMenu', function () {
+    return {
+        link: function (scope, elem, attrs) {
+            $('.nav a').on('click', function(){
+                $('.navbar-toggle').click() //bootstrap 3.x by Richard
+            });
+        }
+    }
 });
