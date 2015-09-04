@@ -8,102 +8,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    
+
     <title>Henslee's Plumbing Heating and Air</title>
     <!--Link Bootstrap CSS-->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <!--Link Angualr-Material CSS-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/0.10.1/angular-material.css">
-   <!--Link CSS-->
+    <!--Link CSS-->
     <link rel="stylesheet" type="text/css" href="styles/style.css">
-       <!-- Fonts -->
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
+    <!-- Fonts -->
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
+    <link  rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic">
     <!-- favicon icon -->
     <link rel="shortcut icon" href="/images/favicon4.ico" type="image/x-icon" />
 </head>
-
-
 <body>
-    
-   
-    
     <div class="brand">Henslee's Plumbing Heating and Air</div>
-    <div class="address-bar">Licensed, Insured, and Bonded. OK# 63615 | Oklahoma City, OK 73157| 1-405-601-1114</div>
+    <div class="address-bar">Licensed, Insured, and Bonded OK# 63615 | Oklahoma City, OK 73157 | <a href="tel:14056011114" style="color: white;">1-405-601-1114</a></div>
 
     <!-- Navigation -->
     <nav class="navbar navbar-default" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
                     <span class="sr-only">Show Menu</span>
+                    <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
                 <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
-                <a class="navbar-brand" href="#/home">Henslee's Plumbing and HVAC</a>
+                <a class="navbar-brand" href="#/home">Henslee's</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="collapse navbar-collapse" id="navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a class="home" href="#/home" >Home</a></li>
+                    <li><a class="home" href="#/home">Home</a></li>
                     <li><a class="about" href="#/about">About</a></li>
                     <li><a class="con" href="#/contact">Contact</a></li>
                     <li><a class="review" href="#/review">Reviews</a></li>
+                    <li><a class="admin" href="#/admin">Admin</a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
     </nav>
-
-        <ng-view><br class="clear transparent"></br></ng-view>
-        
+    <!-- Angular -->
+    <ng-view></ng-view>
     <!-- /.container -->
-
     <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <p>Copyright &copy; Henslee's Plumbing Heat and Air 2015</p>
-                </div>
+       <div class="row">
+            <div class="col-lg-12 text-center">
+                <a class="fb" href="https://www.facebook.com/Okcplumbing?fref=ts">
+                    <img src="images/fb.gif" alt="facebook">
+                </a>
+
+                <p>Copyright &copy; Henslee's Plumbing Heating and Air 2015</p>
             </div>
+
         </div>
     </footer>
-       
+
     <!--</div>-->
 
-   <!--Link JQuery-->
-   <script src="bower_components/jquery/dist/jquery.js"></script>
-   <!--Link Angular-->
-   <script src="bower_components/angular/angular.js"></script>
-   <!--Link Angular-Route-->
-   <script src="bower_components/angular-route/angular-route.js"></script>
-   <!--Link NG- Material-->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/0.10.1/angular-material.js"></script>
-   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-aria.js"></script>
-   <!--Link NG- Animate-->
-   <script src="bower_components/angular-animate/angular-animate.js"></script>
-   <!--Link Bootstrap-->
-   <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-   <!--Link UI Bootstrap-->
-   <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
-   <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <!--Link JQuery-->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <!--Link Angular-->
+    <script src="bower_components/angular/angular.js"></script>
+    <!--Link Angular-Route-->
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <!--Link NG- Material-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/0.10.1/angular-material.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-aria.js"></script>
+    <!--Link NG- Animate-->
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <!--Link Bootstrap-->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <!--Link UI Bootstrap-->
+    <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <!-- Firebase Admin-->
+    <script src="https://cdn.firebase.com/js/client/2.2.9/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/1.1.2/angularfire.min.js"></script>
     <!--Link Module-->
     <script src="js/app.js"></script>
     <!--Link Conrollers-->
     <script src="controllers/HomeCtrl.js"></script>
     <script src="controllers/AboutCtrl.js"></script>
-    <!--<script src="controllers/HeatAirCtrl.js"></script>
-    <script src="controllers/PlumbingCtrl.js"></script>-->
+    <script src="controllers/AdminCtrl.js"></script>
     <script src="controllers/ContactCtrl.js"></script>
     <script src="controllers/ReviewCtrl.js"></script>
+    <script src="controllers/UpdateCtrl.js"></script>
     <!--Link Service-->
     <script src="services/mainService.js"></script>
-    
-
 </body>
-
 </html>

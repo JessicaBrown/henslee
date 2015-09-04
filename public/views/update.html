@@ -1,0 +1,20 @@
+<div class "logout">
+    <button ng-click="af.logout()">Logout</button>
+    <div ng-hide="authData">
+    </div>
+</div>
+<div class="updateBox">
+    <div flex layout="row" layout-align="center center">
+        <div flex-sm="100" flex-gt-sm="90" flex-gt-md="70" flex-gt-lg="50" class="md-whiteframe-z2">
+            <md-content class="md-padding">
+                <div flex-sm="100" flex-gt-sm="80" layout-sm="column">
+                    <div ng-repeat="review in af.reviews">
+                        <button ng-click="af.deleteReview(review._id)" class="glyphicon glyphicon-trash dReview "></button>
+                        {{review.name}}: {{review.review}}
+                    </div>
+                </div>
+
+            </md-content>
+        </div>
+    </div>
+</div>

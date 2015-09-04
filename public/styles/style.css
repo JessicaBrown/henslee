@@ -1,114 +1,6 @@
-/*html, body{
-  
-    height: 100%;
-    }
-
-.home-container {
-    background-image: url("../images/copperpipe.gif");
-    height: 100%; 
-}
-
-ng-view {
-    height: calc(100% - 60px);
-    margin-bottom: 60px;
-}
-.hpic{
-    padding-top: 10%;
-    padding-bottom: 10%;
-}
-    #hlogo
-    {
-        border: 5px solid #9D975E;
-    }
-.container1{
-     display: flex;
-     flex-direction: row;
-    justify-content: space-around;
-   font-family: sans-serif;
-   font-size: 20px;
-    }
-
-
-.footer {
-   font-family: sans-serif;
-   display:flex;
-   justify-content: center;
-   text-align: center;
-   flex-wrap: nowrap;
-   width: 100%;
-   height: 60px;
-   background-color: black;
-   color: grey;
-    }
-
-    
-.fbLogo{
-    margin-top:5px;
-    height: 45px;
-    width: 100px;
-    }
-    
-.ptnPic{ 
-     height: 55px;
-    width: 90px;   
-}
-
-@media screen and (max-width: 800px){
-    .col-md-6, .footInfo{
-        display: none;
-    }
-}
-
-.backP{
-    padding-top: 10%;
-    background-image: url('../images/water-bg.jpg');
-   width:100%;
-   height:100%;
-   background-position:center;
-   background-size:cover;
-}
-.pInfo{
-   font-family: sans-serif;
-   font-size: 18px;
-   color:  red;
-   font-weight: 900;
-    
-}
-.backHA{
-    padding-top: 10%;
-    background-image: url('../images/hna.jpg');
-   width:100%;
-   height:100%;
-   background-position:center;
-   background-size:cover;
-}
-*/
-/*.haInfo{
-   font-family: sans-serif;
-   font-size: 18px;
-   color:  white !important;
-   font-weight: 900;
-    
-}*/
-
-.review{
-    
-    margin-bottom: 10%;
-}
-.contact{
-    
-    margin-top: 15%;
-    margin-bottom: 15%;
-}
-
-/*#review2{
-    display: flex;
-    justify-content: center;
-}*/
-
 html{
     height: 100%;
-    background: url('../images/brickwall.jpg') no-repeat center center fixed; 
+    background: url('../images/wall.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -117,22 +9,11 @@ html{
 
 body {
     font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-    background: url('../images/brickwall.jpg') no-repeat center center fixed;
+    background: url('../images/wall.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-    width: 100%;
-    height: 100%;
-}
-
-#bg {
-    min-width: 100%;
-    min-height: 100%;
-}
-
-ng-view{
-    background-color: transparent;
 }
 
 h1,
@@ -235,7 +116,7 @@ footer p {
 }
 
 @media screen and (min-width:768px) {
-.brand {
+    .brand {
         display: inherit;
         margin: 0;
         padding: 30px 0 10px;
@@ -246,18 +127,18 @@ footer p {
         font-weight: 700;
         line-height: normal;
         color: #fff;
-}
+    }
 
-.top-divider {
+    .top-divider {
         margin-top: 0;
-}
+    }
 
-.img-left {
+    .img-left {
         float: left;
         margin-right: 25px;
-}
+    }
 
-.address-bar {
+    .address-bar {
         display: inherit;
         margin: 0;
         padding: 0 0 40px;
@@ -268,44 +149,105 @@ footer p {
         font-weight: 400;
         letter-spacing: 3px;
         color: #fff;
-}
+    }
 
-.navbar {
+    .navbar {
         border-radius: 0;
-}
+    }
 
-.navbar-header {
+    .navbar-header {
         display: none;
-}
+    }
 
-.navbar {
+    .navbar {
         min-height: 0;
-}
+    }
 
-.navbar-default {
+    .navbar-default {
         border: none;
         background: #fff;
         background: rgba(255,255,255,0.9);
-}
+    }
 
-.nav>li>a {
+    .nav>li>a {
         padding: 35px;
-}
+    }
 
-.navbar-nav>li>a {
+    .navbar-nav>li>a {
         line-height: normal;
-}
+    }
 
-.navbar-nav {
+    .navbar-nav {
         display: table;
         float: none;
         margin: 0 auto;
         table-layout: fixed;
         font-size: 1.25em;
+    }
 }
+
 @media screen and (min-width:1200px) {
     .box:after {
         content: '';
         display: table;
         clear: both;
+    }
 }
+
+.admin1{
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+
+.call{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.review{ 
+    margin-bottom: 5%;
+}
+
+.contact{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.Ainfo{
+    display: flex;
+    flex-wrap: wrap;    
+    text-align: center;   
+}
+
+.title1{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.titleR{
+      margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    
+}
+
+.dReview{
+    margin-top: 5%;
+    color: red;
+    margin-bottom: 5%;
+}
+
+.reasons{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 12px;
+}
+
+.updateBox{
+    margin-bottom: 5%;
+}
+

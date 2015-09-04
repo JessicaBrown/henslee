@@ -1,0 +1,21 @@
+<div class="admin1">   
+     <div flex layout="row" layout-align="center center">
+           <div flex-sm="100" flex-gt-sm="90" flex-gt-md="70" flex-gt-lg="50" class="md-whiteframe-z2">
+                <md-content class="md-padding">
+                    <div flex-sm="100" flex-gt-sm="80" layout-sm="column">
+            <form name="adminForm" data-ng-submit="af.loginAdmin()">
+                <md-input-container>
+                    <label>Email:</label>
+                        <input type="email" data-ng-model="af.email" aria-label="email">
+                </md-input-container>
+                <md-input-container>
+                    <label>Password:</label>
+                    <input type="password" data-ng-model="af.password" aria-label="password">
+                </md-input-container>
+                <md-button type="submit" class="md-primary" ng-class="{'md-raised md-hue-1':(adminForm.$dirty && adminForm.$valid)}">Sign In</md-button>
+            </form>
+                 </md-content>
+                    </div>
+           </div>
+   </div>
+</div>

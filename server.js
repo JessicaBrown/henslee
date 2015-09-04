@@ -20,26 +20,25 @@ var ReviewsCtrl = require('./server/controllers/ReviewsCtrl.js');
 var app = express();
 var data = { message: 'Working!!' }; 
 
+//to make live 
 
-// var config = module.exports = {};
-
- if (process.env.NODE_ENV == "dev") {
- 	// DEVELOPMENT-SPECIFIC CONFIG //
- 	var portNum = 8080;
+//  if (process.env.NODE_ENV == "dev") {
+//  	// DEVELOPMENT-SPECIFIC CONFIG //
+//  	var portNum = 8080;
 	
- } else {
- 	// PRODUCTION-SPECIFIC CONFIG //
- 	var portNum = 80;
+//  } else {
+//  	// PRODUCTION-SPECIFIC CONFIG //
+//  	var portNum = 80;
 	
- }
+//  }
 
 
 //*************************************
 //         MondoDB Connection           
 //*************************************
 
-//var port = process.env.PORT || 8080;
-var port = portNum;
+var port = process.env.PORT || 8080;  //to use on my local comp
+// var port = portNum;               // to make live
 var mongoUri = 'mongodb://localhost/henslee';
 
 mongoose.set('debug', true);
@@ -62,12 +61,11 @@ app.use(express.static('public'));
 //**************************************
 //            Endpoints                
 //**************************************
-
+// i choose api as pathway and must match mainService
 app.get('/api/reviews', ReviewsCtrl.read);
 app.post('/contact-form', HensleeCtrl.sendMail);
 app.post('/api/review', ReviewsCtrl.addReview);
-// app.put('/api/birds/:id', SightingCtrl.update);
-// app.delete('/api/birds/:id', SightingCtrl.delete);
+app.delete('/api/reviews/:id', ReviewsCtrl.delete);
 
 
 

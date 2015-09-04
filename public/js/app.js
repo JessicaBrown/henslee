@@ -1,6 +1,18 @@
 "use strict";
 var app = angular.module('hensleeApp', ['ngRoute', 'ui.bootstrap', 'ngMaterial', 'ngAria']);
 
+//added app.run for security 
+//added to prevent going straight to the update page without logging in 
+app.run(function ($rootScope, $location, $route){  
+    $rootScope.$on('$routeChangeStart', function(event, next) {
+        console.log(next.$$route.originalPath);
+        if(next.$$route.originalPath === '/update' && !$rootScope.authData) {
+            $location.path('/admin');
+        }
+    })    
+});
+
+//Angular NG-Routing
 app.config(function ($routeProvider) {
     $routeProvider
         .when('/home', {
@@ -11,31 +23,43 @@ app.config(function ($routeProvider) {
             templateUrl: '/views/about.html',
             controller: 'AboutCtrl'
         })
-        // .when('/heatair', {
-        //     templateUrl: 'views/heatair.html',
-        //     controller: 'HeatAirCtrl',
-        // })
-        // .when('/plumbing', {
-        //     templateUrl: 'views/plumbing.html',
-        //     controller: 'PlumbingCtrl',
-        // })
         .when('/contact', {
             templateUrl: 'views/contact.html',
             controller: 'ContactCtrl',
             controllerAs: 'cf'
         })
-          .when('/review', {
+        .when('/review', {
             templateUrl: 'views/review.html',
             controller: 'ReviewCtrl',
             controllerAs: 'vm',
+            //use resolve to make sure reviews run asynchronously
             resolve: {
-                recentReviews: function(mainService) {
+                recentReviews: function (mainService) {
                     return mainService.getReviews();
                 }
             }
         })
-
+        .when('/admin', {
+            controller: 'AdminCtrl',
+            templateUrl: '/views/admin.html',
+            controllerAs: 'af',
+            resolve: {
+                updateReviews: function (mainService) {
+                    return mainService.getReviews();
+                }
+            }
+        })
+        .when('/update', {
+            controller: 'UpdateCtrl',
+            templateUrl: 'views/update.html',
+            controllerAs: 'af',
+            resolve: {
+                updateReviews: function (mainService) {
+                    return mainService.getReviews();
+            }
+        }
+    })
         .otherwise({
             redirectTo: '/home'
-        });
+    });
 });

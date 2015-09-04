@@ -8,15 +8,20 @@ addReview: function(req, res){
             else Reviews.find().sort('-createdAt').limit(5).exec( function(err, reviews){
                 res.json(reviews)
             })
-        });
-        
+        })    
     },
     read: function(req, res){
-        console.log("*******REad"); //console logs in terminal
+        console.log("*******READ"); //console logs in terminal
        Reviews.find().sort('-createdAt').limit(5).exec( function(err, reviews){
                 res.json(reviews)
-            })
-        
+            })     
     },
+      delete: function(req, res) {
+          console.log('************DELETE*****');
+    Reviews.findByIdAndRemove(req.params.id, function(err, result) {
+      if (err) return res.status(500).send(err);
+      else res.send(result);
+    });
+  }
 };
 

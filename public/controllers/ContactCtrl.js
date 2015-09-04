@@ -1,12 +1,10 @@
-
 'use strict';
 
 var app = angular.module('hensleeApp');
 
 app.controller('ContactCtrl',
     function ($scope, $http, $mdToast, $animate) {
-        
- 
+
         $scope.toastPosition = {
             bottom: false,
             top: true,
@@ -26,26 +24,20 @@ app.controller('ContactCtrl',
             var data = {
                 contactName: this.contactName,
                 contactEmail: this.contactEmail,
-                contactMsg: this.contactMsg
+                contactMsg: this.contactMsg,
             };
 
-
             $http.post('/contact-form', data).
-                success(function (data, status, headers, config) {
+            success(function (data, status, headers, config) {
 
-
-                    $mdToast.show(
-                        $mdToast.simple()
-                            .content('Thanks for contacting us ' + data.contactName + ' we appreciate your business!')
-                            .position($scope.getToastPosition())
-                            .hideDelay(5000)
-                        );
-
-                }).
-                error(function (data, status, headers, config) {
-
-                });
-
+                $mdToast.show(
+                    $mdToast.simple()
+                    .content('Thanks for contacting us. We appreciate your business!')
+                    .position($scope.getToastPosition())
+                    .hideDelay(5000)
+                );
+            }).
+            error(function (data, status, headers, config) {});
         };
     }
 );
