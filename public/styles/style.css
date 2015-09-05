@@ -254,6 +254,3 @@ footer p {
     display: none;
 }
 
-[ng-cloak], .ng-cloak {
-  display: none !important;
-}
