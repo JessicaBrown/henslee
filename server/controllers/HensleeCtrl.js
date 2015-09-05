@@ -1,7 +1,7 @@
 'use strict';
 
 var mandrill = require('mandrill-api/mandrill');
-var mandrill_client = new mandrill.Mandrill('ZXm2F-AgRLBZoi4l-TWUqA');
+var mandrill_client = new mandrill.Mandrill('ZXm2F-AgRLBZoi4l-TWUqA'); //place key from mandrill here
 
 module.exports = {
     sendMail: function (req, res) {
@@ -11,7 +11,7 @@ module.exports = {
             },
             "html": req.body.contactMsg,
             "subject": "Request for contact",
-            "from_email": 'hensleesplumbingheatandair@henslees.com',  //replace with email name from domain
+            "from_email": 'hensleesplumbingheatandair@henslees.com',  //replace with verified email name from domain
             "from_name": req.body.contactName,
             "to": [{
                 "email": "hensleesplumbing@msn.com", 
