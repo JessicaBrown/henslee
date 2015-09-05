@@ -20,7 +20,7 @@ app.controller('ContactCtrl',
         };
 
         this.sendMail = function () {
-            console.log(this);
+            // console.log(this);
             var data = {
                 contactName: this.contactName,
                 contactEmail: this.contactEmail,

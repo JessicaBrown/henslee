@@ -5,7 +5,7 @@ var app = angular.module('hensleeApp', ['ngRoute', 'ui.bootstrap', 'ngMaterial',
 //added to prevent going straight to the update page without logging in 
 app.run(function ($rootScope, $location, $route){  
     $rootScope.$on('$routeChangeStart', function(event, next) {
-        console.log(next.$$route.originalPath);
+        // console.log(next.$$route.originalPath);
         if(next.$$route.originalPath === '/update' && !$rootScope.authData) {
             $location.path('/admin');
         }
@@ -63,12 +63,12 @@ app.config(function ($routeProvider) {
             redirectTo: '/home'
     });
 })
-
+//custome directive to collapse the menu after clicking a link
 .directive('collapseMenu', function () {
     return {
         link: function (scope, elem, attrs) {
             $('.nav a').on('click', function(){
-                $('.navbar-toggle').click() //bootstrap 3.x by Richard
+                $('.navbar-toggle').click() 
             });
         }
     }

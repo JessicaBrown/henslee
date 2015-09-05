@@ -11,7 +11,7 @@ app.service('mainService', function ($http, $q) {
             url: '/api/review',
             data: review
         }).then(function (result) {
-            console.log('mainService line 14 - res.data.message: ', result.data);
+            // console.log('mainService line 14 - res.data.message: ', result.data);
             deferred.resolve(result.data);
         });
         return deferred.promise;
@@ -23,7 +23,7 @@ app.service('mainService', function ($http, $q) {
             method: 'GET',
             url: '/api/reviews'
         }).then(function (result) {
-            console.log('mainService line 26 - res: ', result);
+            // console.log('mainService line 26 - res: ', result);
             deferred.resolve(result.data);
         })
         return deferred.promise;
@@ -34,7 +34,7 @@ app.service('mainService', function ($http, $q) {
             method: "DELETE",
             url: 'api/reviews/' + id,   //has to match endpoint
         }).then(function(result) {
-            console.log('mainService line 37 - res: ', result)
+            // console.log('mainService line 37 - res: ', result)
             deferred.resolve(result.data);
         });
         return deferred.promise
