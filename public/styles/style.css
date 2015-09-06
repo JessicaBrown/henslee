@@ -115,6 +115,7 @@ footer p {
     padding: 50px 0;
 }
 
+
 @media screen and (min-width:768px) {
     .brand {
         display: inherit;
@@ -199,7 +200,6 @@ footer p {
     margin-bottom: 10%;
 }
 
-
 .call{
     margin-left: auto;
     margin-right: auto;
@@ -253,4 +253,5 @@ footer p {
 .a, .carousel-control{
     display: none;
 }
+
 
