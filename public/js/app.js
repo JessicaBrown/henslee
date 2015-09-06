@@ -63,12 +63,14 @@ app.config(function ($routeProvider) {
             redirectTo: '/home'
     });
 })
-//custome directive to collapse the menu after clicking a link
+//custome directive to collapse the menu after clicking a link on the hamburger but not when in widescreen
 .directive('collapseMenu', function () {
     return {
         link: function (scope, elem, attrs) {
             $('.nav a').on('click', function(){
-                $('.navbar-toggle').click() 
+                if ($(window).width() <= 768) {
+                  $('.navbar-toggle').click(); 
+                }
             });
         }
     }
