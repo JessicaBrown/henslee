@@ -6,9 +6,9 @@ app.controller('ContactCtrl',
     function ($scope, $http, $mdToast, $animate) {
 
         $scope.toastPosition = {
-            bottom: false,
-            top: true,
-            left: false,
+            bottom: true,
+            top: false,
+            left: true,
             right: true
         };
         $scope.getToastPosition = function () {
@@ -34,10 +34,13 @@ app.controller('ContactCtrl',
                     $mdToast.simple()
                     .content('Thanks for contacting us. We appreciate your business!')
                     .position($scope.getToastPosition())
-                    .hideDelay(10000)
+                    .hideDelay(5000)
                 );
             }).
             error(function (data, status, headers, config) {});
+            // $scope.contactName = '',
+            // $scope.contactEmail = '',
+            // $scope.contactMsg = ''
         };
     }
 );

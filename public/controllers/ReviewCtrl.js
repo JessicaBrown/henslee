@@ -2,8 +2,21 @@
 
 var app = angular.module('hensleeApp');
 
-app.controller('ReviewCtrl', function (mainService, recentReviews) {
+app.controller('ReviewCtrl', function (mainService, recentReviews,$scope, $http, $mdToast, $animate) {
 
+        $scope.toastPosition = {
+            bottom: true,
+            top: false,
+            left: true,
+            right: true
+        };
+        $scope.getToastPosition = function () {
+            return Object.keys($scope.toastPosition)
+                .filter(function (pos) {
+                    return $scope.toastPosition[pos];
+                })
+                .join(' ');
+        };
     var vm = this;
     vm.reviews = recentReviews;
     vm.addReview = function () {
@@ -11,6 +24,20 @@ app.controller('ReviewCtrl', function (mainService, recentReviews) {
         mainService.addReview(vm.newReview).then(function (res) {
             // console.log('res from ReviewCtrl in line 12: ', res);
             vm.reviews = res
+           // vm.reviewForm.$setPristine();
+            vm.newReview.name = '',
+                vm.newReview.review = ''
+           
         });
+                $mdToast.show(
+                    $mdToast.simple()
+                    .content('Thanks for the review!')
+                    .position($scope.getToastPosition())
+                    .hideDelay(5000)
+                );
+                
+               
     };
+
 });
+    
