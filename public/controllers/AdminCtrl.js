@@ -10,7 +10,8 @@ app.controller('AdminCtrl', function (mainService, $location, $scope, updateRevi
         ref.authWithPassword({
             email: af.email,
             password: af.password
-        }, function (error, authData) {
+        }, 
+        function (error, authData) {
             if (error) {
                 console.log("Login Failed!", error);
             } else {

@@ -3,14 +3,15 @@
 var app = angular.module('hensleeApp');
 
 app.controller('ContactCtrl',
-    function ($scope, $http, $mdToast, $animate) {
-
+    function ($scope, $http, $mdToast, $animate, mainService) {
+        var cf = this;
         $scope.toastPosition = {
             bottom: true,
             top: false,
             left: true,
             right: true
         };
+        
         $scope.getToastPosition = function () {
             return Object.keys($scope.toastPosition)
                 .filter(function (pos) {
@@ -26,21 +27,18 @@ app.controller('ContactCtrl',
                 contactEmail: this.contactEmail,
                 contactMsg: this.contactMsg,
             };
-
-            $http.post('/contact-form', data).
-            success(function (data, status, headers, config) {
-
-                $mdToast.show(
+            
+            mainService.sendMail(data).then(function(response){
+                 $mdToast.show(
                     $mdToast.simple()
                     .content('Thanks for contacting us. We appreciate your business!')
                     .position($scope.getToastPosition())
                     .hideDelay(5000)
                 );
-            }).
-            error(function (data, status, headers, config) {});
-            // $scope.contactName = '',
-            // $scope.contactEmail = '',
-            // $scope.contactMsg = ''
+                
+            cf.contactName = '',
+            cf.contactEmail = '',
+            cf.contactMsg = ''
+            })
         };
-    }
-);
+});

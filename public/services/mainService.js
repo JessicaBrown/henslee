@@ -28,7 +28,8 @@ app.service('mainService', function ($http, $q) {
         })
         return deferred.promise;
     };
-        this.deleteReview = function(id) {
+    
+     this.deleteReview = function(id) {
         var deferred = $q.defer();
         $http({
             method: "DELETE",
@@ -39,4 +40,14 @@ app.service('mainService', function ($http, $q) {
         });
         return deferred.promise
     }
+    
+    this.sendMail = function(data){
+         return $http({
+             method: "POST",
+             url: '/contact-form',
+             data: data
+         })
+    }
+    
 });
+
